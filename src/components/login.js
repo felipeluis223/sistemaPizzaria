@@ -9,6 +9,20 @@ function Login(){
 	const [emailUser, setEmailUser] = useState('')
 	const [passwordUser, setPasswordUser] = useState('')
 
+	// Função responsável por receber valores do login (user e password) e verificar se o funcionário conseguiu acessar o sistema.
+	// User: admin
+	// Password: admin
+	const ValidateFuncionario = ()=>{
+		if((emailUser === "admin")&&(passwordUser === "admin")){
+			console.log("acessou")
+			return true
+		}
+		else{
+			console.log("acesso negado")
+			return false
+		}
+	}
+
 	return (
 		<ThemeProvider theme={LightTheme}>
 			<section className="containerGeral">
@@ -17,15 +31,24 @@ function Login(){
 					</div>
 
 					<section className="containerLoginDados">
-						<h1>Bem vindo!</h1>
+						<h1>Olá, seja bem vindo!</h1>
 						<div className="mb-4">
-							<TextField id="outlined-basic" label="E-mail" variant="outlined" />
+							<TextField 
+								id="outlined-basic" 
+								onChange={(e)=>setEmailUser(e.target.value)}
+								label="E-mail" 
+								variant="outlined" />
 						</div>
 						<div className="mb-4">
-							<TextField id="outlined-basic" label="Senha" variant="outlined" color="primary"/>
+							<TextField 
+								id="outlined-basic"
+								type="password"
+								onChange={(e)=>setPasswordUser(e.target.value)}
+								label="Senha" 
+								variant="outlined" 
+								color="primary"/>
 						</div>
-
-						<Button variant="contained">Login</Button>
+						<Button variant="contained" onClick={ValidateFuncionario}>Login</Button>
 					</section>
 				</div>
 			</section>
