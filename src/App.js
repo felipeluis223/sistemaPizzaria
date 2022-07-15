@@ -1,9 +1,11 @@
-import Login from './components/login.js'
+import Login from './components/login/login.js'
+import Main from './components/main/main.js'
 
 function App() {
   return (
     <div>
-      <Login />
+      {/*<Login />*/}
+      <Main />
     </div>
   )
 }

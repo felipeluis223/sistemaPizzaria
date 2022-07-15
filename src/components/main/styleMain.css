@@ -1,0 +1,12 @@
+.containerCirclePizzaiolo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #fa4b00;
+    background-image: url("../../../public/imgs/pizzaioloLogin.jpg");
+    background-size: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { ThemeProvider } from '@mui/material'
-import '../components/styles/styleLogin.css'
+import './styleLogin.css'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-import LightTheme from '../themes/light.js'
+import LightTheme from '../../themes/light.js'
 
 function Login(){
 	const [emailUser, setEmailUser] = useState('')
